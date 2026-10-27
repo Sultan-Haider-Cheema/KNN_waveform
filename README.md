@@ -13,16 +13,18 @@ This project studies how the number of neighbors, training-set size, and data-re
 - Implement Condensed Nearest Neighbour (CNN) instance selection.
 - Implement a Reduced Nearest Neighbour (RNN)-style reduction experiment.
 - Compare kNN with Decision Tree, Random Forest, and RBF-kernel Support Vector Machine (SVM).
-- Consider the trade-off between predictive performance and the amount of training data retained.
+- Evaluate the trade-off between predictive performance and the amount of training data retained.
 
 ## Methods
 
 ### Preprocessing
+
 - Load the Waveform dataset from `waveform.data`.
 - Split the data into training and test sets using a fixed random seed.
 - Standardize features using `StandardScaler`.
 
 ### Experiments
+
 - kNN hyperparameter search with 5-fold cross-validation.
 - Error analysis across different training-set sizes.
 - CNN and RNN-style data-reduction experiments.
@@ -40,6 +42,8 @@ This project studies how the number of neighbors, training-set size, and data-re
 
 ## Repository Contents
 
+The repository files are organized at the root level:
+
 - `Waveforms_project.ipynb` — notebook containing the code and experiments.
 - `Waveforms_Project.pdf` — project report.
 - `waveform.data` — dataset file expected by the notebook.
@@ -51,11 +55,9 @@ This project studies how the number of neighbors, training-set size, and data-re
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_REPOSITORY_URL
-cd YOUR_REPOSITORY_FOLDER
+git clone https://github.com/Sultan-Haider-Cheema/KNN_waveform.git
+cd KNN_waveform
 ```
-
-Replace the placeholders with your GitHub repository URL and folder name.
 
 ### 2. Create and activate a virtual environment
 
@@ -81,35 +83,57 @@ python -m pip install -r requirements.txt
 
 ### 4. Check the dataset location
 
-The notebook currently loads the dataset using:
+The notebook loads the dataset using:
 
 ```python
-pd.read_csv("waveform.data", header=None, sep=",")
+pd.read_csv('waveform.data', header=None, sep=',')
 ```
 
-Therefore, place `waveform.data` in the same directory from which you launch the notebook (normally the repository root), or update the path in the notebook to match your file location.
+Keep `waveform.data` in the repository root alongside `Waveforms_project.ipynb`. This allows the notebook to load the dataset using its existing relative path, provided you launch Jupyter from the repository root.
+
+If you store the dataset elsewhere, update the path in the notebook accordingly.
 
 ### 5. Run the notebook
+
+From the repository root, run:
 
 ```bash
 jupyter notebook
 ```
 
-Open `Waveforms_project.ipynb` and run the cells in order. In Jupyter, use **Restart Kernel and Run All Cells** to verify the notebook from a clean state.
+Open `Waveforms_project.ipynb` and execute the cells in order. Use **Restart Kernel and Run All Cells** to verify the notebook from a clean state.
 
-## Results
+## Results and Evaluation
 
-The notebook prints and plots the experimental results, including cross-validation scores, classification accuracy, data-reduction statistics, and classifier comparisons. Refer to the notebook and accompanying PDF report for the measured values.
+The experiments evaluate the performance of k-Nearest Neighbors (kNN) and compare it with Decision Tree, Random Forest, and RBF-kernel Support Vector Machine (SVM) classifiers.
 
-No performance numbers are stated here so that the README does not report unverified results. If you add a results table, copy the values from a successful, reproducible run and clearly identify which split and metric each value represents.
+The analysis focuses on:
+
+- **Hyperparameter tuning:** Examining how the choice of `k` affects classification performance.
+- **Generalization behaviour:** Comparing training and test errors across different training-set sizes.
+- **Classifier comparison:** Evaluating the predictive performance of different machine learning algorithms.
+- **Data reduction:** Investigating how Condensed Nearest Neighbour (CNN) and Reduced Nearest Neighbour (RNN)-style methods affect the number of retained training instances and classification performance.
+
+The experimental results, visualizations, and detailed comparisons are available in the Jupyter Notebook and the accompanying project report.
 
 ## Notes and Limitations
 
-- Use the same dataset version as the original experiments.
-- Keep preprocessing and model selection within the training data; use the held-out test set for final evaluation.
-- Data-reduction methods should be assessed using both the number of retained samples and predictive performance.
-- Check the dataset's terms before redistributing it publicly.
+- Results may vary depending on the dataset version, train-test split, and experimental configuration.
+- Feature standardization and hyperparameter selection should be performed using training data to avoid data leakage.
+- Data-reduction techniques can reduce the size of the training set, but their impact on predictive performance should also be considered.
+- The dataset is included for experimental use; users should check its original licensing and redistribution terms before reusing or redistributing it.
 
 ## Project Report
 
 See `Waveforms_Project.pdf` for the accompanying report.
+
+## Author
+
+**Muhammad Sultan Haidar Cheema**
+
+Master's student in Machine Learning and Data Mining  
+Université Jean Monnet, Saint-Étienne, France
+
+## Repository
+
+[View the project on GitHub](https://github.com/Sultan-Haider-Cheema/KNN_waveform)
