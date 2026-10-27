@@ -8,7 +8,7 @@ How close can a well-tuned **k-Nearest Neighbors** classifier get to the theoret
 
 This project tunes kNN on the classic **Waveform** dataset (Breiman et al.), studies its bias–variance behaviour, implements two **instance-reduction** algorithms (CNN and an RNN-style method) from scratch, and benchmarks kNN against Decision Tree, Random Forest and RBF-SVM.
 
-> M1 Machine Learning & Data Mining, Université Jean Monnet, Saint-Étienne (2025–2026)
+> Masters in Machine Learning & Data Mining, Université Jean Monnet, Saint-Étienne (2025–2026)
 > 📄 Full write-up: [`Waveforms_Project.pdf`](Waveforms_Project.pdf)
 
 ---
