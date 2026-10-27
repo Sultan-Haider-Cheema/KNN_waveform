@@ -126,5 +126,5 @@ Being explicit about these is part of the project:
 
 ## 👤 Author
 
-**Muhammad Sultan Haider Cheema**, M1 Machine Learning & Data Mining, Université Jean Monnet
+**Muhammad Sultan Haider Cheema**, Machine Learning & Data Mining, Université Jean Monnet
 [GitHub](https://github.com/Sultan-Haider-Cheema) · [LinkedIn](https://www.linkedin.com/in/sultan-haider-cheema-60677321a/)
